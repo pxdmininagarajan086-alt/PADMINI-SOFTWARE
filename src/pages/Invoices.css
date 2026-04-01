@@ -1,0 +1,14 @@
+.invoices-page .page-header {
+  margin-bottom: 2rem;
+}
+
+/* Share similar structural styles with Inventory without repeating too much */
+.view-btn:hover {
+  background-color: rgba(99, 102, 241, 0.1);
+  color: var(--brand-primary);
+}
+
+.download-btn:hover {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--accent-success);
+}

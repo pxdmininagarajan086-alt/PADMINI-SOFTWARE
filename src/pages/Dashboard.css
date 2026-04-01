@@ -1,0 +1,112 @@
+.page-header {
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.stat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.stat-title {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.stat-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.stat-icon-wrapper {
+  padding: 0.75rem;
+  border-radius: var(--radius-md);
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--brand-primary);
+}
+
+.stat-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.text-success { color: var(--accent-success); font-weight: 600; }
+.text-danger { color: var(--accent-danger); font-weight: 600; }
+.text-warning { color: var(--accent-warning); font-weight: 600; }
+
+.trend-label { color: var(--text-secondary); }
+
+.grid-2-col {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .grid-2-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+.min-h-\[300px\] {
+  min-height: 300px;
+}
+
+.btn-sm {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.75rem;
+}
+
+.activity-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.activity-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.activity-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-top: 0.375rem;
+}
+
+.bg-success { background-color: var(--accent-success); box-shadow: 0 0 10px rgba(16, 185, 129, 0.4); }
+.bg-warning { background-color: var(--accent-warning); box-shadow: 0 0 10px rgba(245, 158, 11, 0.4); }
+.bg-brand { background-color: var(--brand-primary); box-shadow: var(--shadow-glow); }
+
+.activity-details p {
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+.activity-details span {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+}
