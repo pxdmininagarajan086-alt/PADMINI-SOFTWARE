@@ -8,6 +8,9 @@ export default function CreateQuote() {
   const navigate = useNavigate();
   const [inventory, setInventory] = useState([]);
   const [items, setItems] = useState([{ id: 1, desc: '', qty: 1, price: 0, inventory_id: '' }]);
+  const [loading, setLoading] = useState(false);
+  
+  const [customer, setCustomer] = useState({ name: '', email: '', address: '' });
   
   useEffect(() => {
     fetchInventory();
@@ -68,6 +71,53 @@ export default function CreateQuote() {
   const tax = subtotal * taxRate;
   const total = subtotal + tax;
 
+  const quoteNumber = `QT-${new Date().getFullYear()}-${Math.floor(Math.random() * 10000).toString().padStart(4, '0')}`;
+
+  const handleSaveDraft = async () => {
+    if (loading) return;
+    setLoading(true);
+    try {
+      console.log('Saving draft:', { customer, items, total });
+      // Simulate/Implement DB save here
+      await new Promise(resolve => setTimeout(resolve, 800)); // Mimic network delay
+      alert(`Draft ${quoteNumber} saved successfully!`);
+      navigate('/quotations');
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleSendQuote = async () => {
+    if (loading) return;
+    setLoading(true);
+    try {
+      const quoteData = {
+        number: quoteNumber,
+        date: new Date().toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric' }),
+        customer,
+        items: items.map(item => ({
+          ...item,
+          amount: item.qty * item.price
+        })),
+        subtotal,
+        tax,
+        total
+      };
+      
+      // In a real app, we'd save to database here
+      await new Promise(resolve => setTimeout(resolve, 800)); // Mimic network delay
+      
+      navigate('/quotations/preview', { state: { quoteData } });
+    } catch (err) {
+      console.error(err);
+      alert('Error generating quote. Please check your data.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="create-invoice-page animate-fade-in">
       <div className="page-header flex justify-between items-center mb-6">
@@ -77,15 +127,15 @@ export default function CreateQuote() {
           </button>
           <div>
             <h1>Create New Quote</h1>
-            <p className="text-secondary">QT-{new Date().getFullYear()}-{Math.floor(Math.random() * 10000).toString().padStart(4, '0')}</p>
+            <p className="text-secondary">{quoteNumber}</p>
           </div>
         </div>
         <div className="flex gap-4">
-          <button className="btn btn-secondary">
-            <Save size={18} /> Save Draft
+          <button className="btn btn-secondary" onClick={handleSaveDraft} disabled={loading}>
+            {loading ? 'Saving...' : <><Save size={18} /> Save Draft</>}
           </button>
-          <button className="btn btn-primary">
-            <Send size={18} /> Send Quote
+          <button className="btn btn-primary" onClick={handleSendQuote} disabled={loading}>
+            {loading ? 'Generating...' : <><Send size={18} /> Send Quote</>}
           </button>
         </div>
       </div>
@@ -97,15 +147,32 @@ export default function CreateQuote() {
             <div className="grid-2-col gap-4">
               <div className="input-group">
                 <label className="input-label">Customer Name</label>
-                <input type="text" className="input-field" placeholder="E.g. Wayne Enterprises" />
+                <input 
+                  type="text" 
+                  className="input-field" 
+                  placeholder="E.g. Wayne Enterprises" 
+                  value={customer.name}
+                  onChange={(e) => setCustomer({...customer, name: e.target.value})}
+                />
               </div>
               <div className="input-group">
                 <label className="input-label">Email Address</label>
-                <input type="email" className="input-field" placeholder="billing@wayne.com" />
+                <input 
+                  type="email" 
+                  className="input-field" 
+                  placeholder="billing@wayne.com" 
+                  value={customer.email}
+                  onChange={(e) => setCustomer({...customer, email: e.target.value})}
+                />
               </div>
               <div className="input-group col-span-2">
                 <label className="input-label">Billing Address</label>
-                <textarea className="input-field min-h-[80px]" placeholder="Full address..."></textarea>
+                <textarea 
+                  className="input-field min-h-[80px]" 
+                  placeholder="Full address..." 
+                  value={customer.address}
+                  onChange={(e) => setCustomer({...customer, address: e.target.value})}
+                ></textarea>
               </div>
             </div>
           </div>

@@ -7,6 +7,7 @@ import Invoices from './pages/Invoices';
 import CreateInvoice from './pages/CreateInvoice';
 import Quotations from './pages/Quotations';
 import CreateQuote from './pages/CreateQuote';
+import PreviewQuote from './pages/PreviewQuote';
 import Expenses from './pages/Expenses';
 import Transportation from './pages/Transportation';
 
@@ -26,6 +27,7 @@ function App() {
               <Route path="/invoices/new" element={<CreateInvoice />} />
               <Route path="/quotations" element={<Quotations />} />
               <Route path="/quotations/new" element={<CreateQuote />} />
+              <Route path="/quotations/preview" element={<PreviewQuote />} />
               <Route path="/expenses" element={<Expenses />} />
               <Route path="/transportation" element={<Transportation />} />
             </Routes>

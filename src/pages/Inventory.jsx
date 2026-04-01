@@ -9,6 +9,7 @@ export default function Inventory() {
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);
   const [inventory, setInventory] = useState([]);
   const [editingId, setEditingId] = useState(null);
+  const [loading, setLoading] = useState(false);
   const [newProduct, setNewProduct] = useState({
     name: '', sku: '', category: '', price: '', quantity: ''
   });
@@ -57,6 +58,9 @@ export default function Inventory() {
 
   const handleAddProduct = async (e) => {
     e.preventDefault();
+    if (loading) return;
+    setLoading(true);
+    
     const product = {
       name: newProduct.name,
       sku: newProduct.sku,
@@ -90,6 +94,9 @@ export default function Inventory() {
       closeModal();
     } catch (error) {
       console.error('Error saving product:', error.message);
+      alert('Error saving product. Please try again.');
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -196,9 +203,10 @@ export default function Inventory() {
                 </button>
                 <button 
                   type="submit" 
-                  className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-medium shadow-sm shadow-blue-600/20"
+                  className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-medium shadow-sm shadow-blue-600/20 disabled:opacity-50"
+                  disabled={loading}
                 >
-                  Save Product
+                  {loading ? 'Saving...' : 'Save Product'}
                 </button>
               </div>
             </form>

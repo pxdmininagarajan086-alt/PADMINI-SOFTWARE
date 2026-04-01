@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Quotation Document - NAGAS CIVIL ENGINEERING CONTRACTORS</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        @media print {
+            .no-print { display: none; }
+            body { background: white; padding: 0; }
+            .a4-canvas { 
+                margin: 0; 
+                box-shadow: none; 
+                page-break-after: always;
+            }
+        }
+        .a4-canvas {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+        }
+        /* Fix for html2pdf page breaks */
+        .page-break {
+            page-break-after: always;
+        }
+    </style>
+    <script id="tailwind-config">
+          tailwind.config = {
+            darkMode: "class",
+            theme: {
+              extend: {
+                colors: {
+                  "outline-variant": "#c2c7d1",
+                  "surface-container": "#eceef0",
+                  "surface-dim": "#d8dadc",
+                  "surface-variant": "#e0e3e5",
+                  "tertiary-fixed-dim": "#ffb780",
+                  "on-background": "#191c1e",
+                  "tertiary-fixed": "#ffdcc4",
+                  "on-tertiary": "#ffffff",
+                  "surface-container-lowest": "#ffffff",
+                  "surface-container-highest": "#e0e3e5",
+                  "background": "#f1f3f5",
+                  "surface-tint": "#0F4C81",
+                  "on-tertiary-fixed-variant": "#6f3800",
+                  "on-primary-fixed-variant": "#07497d",
+                  "on-tertiary-fixed": "#2f1400",
+                  "on-secondary-fixed-variant": "#3a485b",
+                  "on-error-container": "#93000a",
+                  "inverse-on-surface": "#eff1f3",
+                  "secondary-container": "#d5e3fc",
+                  "tertiary-container": "#743b00",
+                  "outline": "#727780",
+                  "primary-container": "#0f4c81",
+                  "on-surface": "#191c1e",
+                  "on-primary-container": "#8ebdf9",
+                  "surface": "#f1f3f5",
+                  "primary": "#0F4C81",
+                  "on-secondary-fixed": "#0d1c2e",
+                  "error": "#ba1a1a",
+                  "secondary-fixed-dim": "#b9c7df",
+                  "secondary-fixed": "#d5e3fc",
+                  "on-error": "#ffffff",
+                  "on-secondary": "#ffffff",
+                  "tertiary": "#532800",
+                  "on-primary-fixed": "#001c37",
+                  "surface-container-high": "#e6e8ea",
+                  "inverse-surface": "#2d3133",
+                  "inverse-primary": "#a0c9ff",
+                  "on-primary": "#ffffff",
+                  "primary-fixed-dim": "#a0c9ff",
+                  "surface-container-low": "#f2f4f6",
+                  "surface-bright": "#f7f9fb",
+                  "secondary": "#515f74",
+                  "on-surface-variant": "#42474f",
+                  "on-tertiary-container": "#f9a767",
+                  "on-secondary-container": "#57657a",
+                  "error-container": "#ffdad6",
+                  "primary-fixed": "#d2e4ff"
+                },
+                fontFamily: {
+                  "headline": ["Manrope"],
+                  "body": ["Inter"],
+                  "label": ["Inter"]
+                },
+                borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px"},
+              },
+            },
+          }
+    </script>
+</head>
+<body class="bg-background font-body text-on-surface p-8">
+    <div id="quotation-container">
+        <main class="flex flex-col items-center gap-12">
+            <!-- Page 1: Quotation Details -->
+            <section class="a4-canvas bg-surface-container-lowest shadow-xl p-12 flex flex-col relative overflow-hidden page-break">
+                <!-- Professional Accents -->
+                <div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-bl-full -mr-32 -mt-32"></div>
+                <!-- Company Header -->
+                <div class="flex justify-between items-start mb-12 relative z-10">
+                    <div class="max-w-md">
+                        <h1 class="font-headline font-extrabold text-3xl text-primary tracking-tight mb-4">NAGAS CIVIL ENGINEERING CONTRACTORS</h1>
+                        <div class="text-on-surface-variant text-sm flex flex-col gap-2">
+                            <p class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-primary">location_on</span> 12/45, Industrial Estate, Chennai - 600032</p>
+                            <p class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-primary">call</span> +91 98400 12345 | +91 44 2250 1122</p>
+                            <p class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-primary">mail</span> contact@nagascontractors.com</p>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <div class="bg-primary text-white px-6 py-2 inline-block rounded-lg font-headline font-bold text-xl tracking-widest mb-4">ESTIMATE</div>
+                        <p class="text-on-surface-variant text-sm font-semibold">Date: Oct 24, 2024</p>
+                        <p class="text-on-surface-variant text-sm font-semibold">Quote ID: #NCEC-2024-089</p>
+                    </div>
+                </div>
+                <!-- Client Info -->
+                <div class="bg-surface-container-low/50 p-6 rounded-xl mb-12 flex justify-between border border-outline-variant/10">
+                    <div>
+                        <h3 class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2">QUOTATION FOR:</h3>
+                        <p class="font-headline font-bold text-lg text-primary">Sandhiya Infocity Navallur</p>
+                        <p class="text-on-surface-variant text-sm max-w-xs mt-1">IT Park Main Gate, Navallur, OMR Road, Chennai - 603103</p>
+                    </div>
+                    <div class="text-right">
+                        <h3 class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2">PROJECT SCOPE:</h3>
+                        <p class="text-on-surface font-semibold">Exterior Signage &amp; Maintenance Support</p>
+                    </div>
+                </div>
+                <!-- Itemized Table -->
+                <div class="flex-grow">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="border-b-2 border-primary/20">
+                                <th class="py-4 px-2 font-headline font-bold text-primary text-sm uppercase tracking-wider">Description</th>
+                                <th class="py-4 px-6 font-headline font-bold text-primary text-sm text-center uppercase tracking-wider">Qty</th>
+                                <th class="py-4 px-6 font-headline font-bold text-primary text-sm text-center uppercase tracking-wider">Unit</th>
+                                <th class="py-4 px-2 font-headline font-bold text-primary text-sm text-right uppercase tracking-wider">Amount (INR)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-outline-variant/15">
+                            <tr>
+                                <td class="py-6 px-2">
+                                    <div class="font-bold text-on-surface mb-1">MS Scaffolding</div>
+                                    <div class="text-xs text-on-surface-variant leading-relaxed max-w-md">Supply and erection of MS pipe scaffolding for exterior works, including safety nets and platform.</div>
+                                </td>
+                                <td class="py-6 px-6 text-center text-on-surface">1,200</td>
+                                <td class="py-6 px-6 text-center text-on-surface">Sq. Ft</td>
+                                <td class="py-6 px-2 text-right font-semibold text-on-surface">1,44,000.00</td>
+                            </tr>
+                            <tr>
+                                <td class="py-6 px-2">
+                                    <div class="font-bold text-on-surface mb-1">Fabrication &amp; Signage Removal</div>
+                                    <div class="text-xs text-on-surface-variant leading-relaxed max-w-md">Dismantling of existing structural signage and metal fabrication elements safely.</div>
+                                </td>
+                                <td class="py-6 px-6 text-center text-on-surface">1</td>
+                                <td class="py-6 px-6 text-center text-on-surface">LS</td>
+                                <td class="py-6 px-2 text-right font-semibold text-on-surface">45,000.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Totals Section -->
+                <div class="mt-8 flex justify-end">
+                    <div class="w-80 space-y-3">
+                        <div class="flex justify-between text-sm px-2">
+                            <span class="text-on-surface-variant">Subtotal</span>
+                            <span class="font-semibold">1,89,000.00</span>
+                        </div>
+                        <div class="flex justify-between text-sm px-2">
+                            <span class="text-on-surface-variant">GST (18%)</span>
+                            <span class="font-semibold">34,020.00</span>
+                        </div>
+                        <div class="h-[1px] bg-outline-variant/30"></div>
+                        <div class="flex justify-between items-center py-2 px-2 bg-primary/5 rounded-lg">
+                            <span class="font-headline font-bold text-primary">GRAND TOTAL</span>
+                            <span class="font-headline font-extrabold text-xl text-primary">₹ 2,23,020.00</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer Branding (Internal Page) -->
+                <div class="mt-auto pt-12 border-t border-outline-variant/15 flex justify-between items-end">
+                    <div class="text-[10px] text-on-surface-variant uppercase tracking-widest font-bold">Page 01 / 02</div>
+                    <div class="text-right">
+                        <p class="text-xs font-bold text-primary mb-12">Authorized Signatory</p>
+                        <div class="h-[1px] w-48 bg-outline-variant mb-1"></div>
+                        <p class="text-[10px] text-on-surface-variant">For Nagas Civil Engineering Contractors</p>
+                    </div>
+                </div>
+            </section>
+            <!-- Page 2: Terms & Conditions -->
+            <section class="a4-canvas bg-surface-container-lowest shadow-xl p-12 flex flex-col page-break">
+                <div class="border-b-4 border-primary/20 pb-4 mb-12">
+                    <h2 class="font-headline font-extrabold text-2xl text-primary tracking-tight">TERMS &amp; CONDITIONS</h2>
+                </div>
+                <div class="flex-grow space-y-8">
+                    <div class="grid grid-cols-1 gap-6">
+                        <!-- Points -->
+                        <div class="flex gap-6 items-start">
+                            <span class="bg-primary/10 text-primary font-bold w-10 h-10 rounded-full flex items-center justify-center shrink-0 border border-primary/20">1</span>
+                            <div>
+                                <h4 class="font-bold text-on-surface mb-1">Material Quality &amp; Supply</h4>
+                                <p class="text-on-surface-variant text-sm leading-relaxed">The scaffolding materials provided will be MS (Mild Steel) pipes and couplers of standard industrial grade. All equipment will be inspected for structural integrity prior to erection at Sandhiya Infocity site.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 items-start">
+                            <span class="bg-primary/10 text-primary font-bold w-10 h-10 rounded-full flex items-center justify-center shrink-0 border border-primary/20">2</span>
+                            <div>
+                                <h4 class="font-bold text-on-surface mb-1">Taxation &amp; GST</h4>
+                                <p class="text-on-surface-variant text-sm leading-relaxed">Goods and Services Tax (GST) is calculated at the prevailing rate of 18%. Any changes in government tax regulations during the contract period will be adjusted accordingly in the final invoice.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 items-start">
+                            <span class="bg-primary/10 text-primary font-bold w-10 h-10 rounded-full flex items-center justify-center shrink-0 border border-primary/20">3</span>
+                            <div>
+                                <h4 class="font-bold text-on-surface mb-1">Payment Terms</h4>
+                                <p class="text-on-surface-variant text-sm leading-relaxed">A 50% advance payment is required upon approval of this estimate. 40% shall be paid upon completion of primary scaffolding erection, and the remaining 10% within 7 days of site clearance.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 items-start">
+                            <span class="bg-primary/10 text-primary font-bold w-10 h-10 rounded-full flex items-center justify-center shrink-0 border border-primary/20">4</span>
+                            <div>
+                                <h4 class="font-bold text-on-surface mb-1">Duration &amp; Rentals</h4>
+                                <p class="text-on-surface-variant text-sm leading-relaxed">The quoted price for scaffolding includes a rental period of 30 days. Any extension beyond this period will attract an additional charge of ₹2.50 per sq. ft per day.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 items-start">
+                            <span class="bg-primary/10 text-primary font-bold w-10 h-10 rounded-full flex items-center justify-center shrink-0 border border-primary/20">5</span>
+                            <div>
+                                <h4 class="font-bold text-on-surface mb-1">Safety &amp; Liability</h4>
+                                <p class="text-on-surface-variant text-sm leading-relaxed">NAGAS Contractors will ensure all laborers use proper PPE (Personal Protective Equipment). However, the client must ensure the work area is clear of unauthorized personnel during the fabrication and removal process.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 items-start">
+                            <span class="bg-primary/10 text-primary font-bold w-10 h-10 rounded-full flex items-center justify-center shrink-0 border border-primary/20">6</span>
+                            <div>
+                                <h4 class="font-bold text-on-surface mb-1">Site Access</h4>
+                                <p class="text-on-surface-variant text-sm leading-relaxed">The client shall provide uninterrupted access to the site and necessary utility connections (Power/Water) required for the removal and fabrication works as specified in the scope.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 items-start">
+                            <span class="bg-primary/10 text-primary font-bold w-10 h-10 rounded-full flex items-center justify-center shrink-0 border border-primary/20">7</span>
+                            <div>
+                                <h4 class="font-bold text-on-surface mb-1">Validity</h4>
+                                <p class="text-on-surface-variant text-sm leading-relaxed">This quotation is valid for a period of 15 days from the date of issue. Prices may be subject to revision based on fluctuating market rates of raw materials if the order is delayed.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bottom Note -->
+                <div class="bg-surface-container-low p-6 rounded-lg mb-12 border border-outline-variant/10">
+                    <p class="text-on-surface-variant text-xs italic leading-relaxed">
+                        Note: All disputes are subject to the jurisdiction of Chennai courts only. For any queries regarding this quotation, please contact our project manager at pm@nagascontractors.com.
+                    </p>
+                </div>
+                <!-- Footer Branding -->
+                <div class="mt-auto pt-12 border-t border-outline-variant/15 flex justify-between items-end">
+                    <div class="text-[10px] text-on-surface-variant uppercase tracking-widest font-bold">Page 02 / 02</div>
+                    <div class="flex gap-4 items-center">
+                        <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center border border-primary/20">
+                            <span class="material-symbols-outlined text-primary text-[20px]">verified</span>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-[10px] font-bold text-primary uppercase tracking-wider">Certified Quality</p>
+                            <p class="text-[10px] text-on-surface-variant font-medium">ISO 9001:2015 Registered</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Actions FAB -->
+    <div class="fixed bottom-8 right-8 flex flex-col gap-4 no-print z-[100]">
+        <button class="bg-primary text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all" onclick="window.print()" title="Print Quotation">
+            <span class="material-symbols-outlined">print</span>
+        </button>
+        <button class="bg-[#0F4C81] text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all" onclick="downloadPDF()" title="Download PDF">
+            <span class="material-symbols-outlined">download</span>
+        </button>
+    </div>
+
+    <script>
+        function downloadPDF() {
+            const element = document.getElementById('quotation-container');
+            const opt = {
+                margin: 0,
+                filename: 'NCEC-Quotation-2024-089.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { 
+                    scale: 2, 
+                    useCORS: true,
+                    letterRendering: true
+                },
+                jsPDF: { 
+                    unit: 'mm', 
+                    format: 'a4', 
+                    orientation: 'portrait' 
+                },
+                pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+            };
+
+            // New Promise-based usage:
+            html2pdf().set(opt).from(element).save();
+        }
+    </script>
+</body>
+</html>
